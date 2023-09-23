@@ -1,0 +1,91 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #6a11cb, #2575fc, #49a09d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background-color: rgba(
+    150,
+    135,
+    135,
+    0.185
+  ); /* Adjust alpha (last value) to change transparency */
+  border: 1px solid #555555;
+  margin-bottom: 20px; /* Add margin to create space at the bottom */
+  padding: 20px; /* Add padding to the content inside the container */
+}
+
+.btn-primary,
+.btn-success {
+  transition: background-color 0.3s ease;
+}
+
+/* Change the background color on hover */
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.custom-file-label::after {
+  content: "Browse";
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#highlightsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight-item {
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.highlight-item .highlight-index {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.highlight-text {
+  display: block;
+  font-size: 14px;
+}
